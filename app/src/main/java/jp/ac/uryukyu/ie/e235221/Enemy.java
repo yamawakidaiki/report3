@@ -18,18 +18,38 @@ public class Enemy {
 	private int attack;
 	private boolean dead;
 
+	/**
+	 * 敵の名前を取得する。
+	 * 
+	 * @return 敵の名前
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * 敵のHPを取得する。
+	 * 
+	 * @return 敵のHP
+	 */
 	public int getHitPoint() {
 		return hitPoint;
 	}
 
+	/**
+	 * 敵の攻撃力を取得する。
+	 * 
+	 * @return 敵の攻撃力
+	 */
 	public int getAttack() {
 		return attack;
 	}
 
+	/**
+	 * 敵の死亡の有無を取得する。
+	 * 
+	 * @return 敵が死亡している場合はtrue、そうでない場合はfalse
+	 */
 	public boolean isDead() {
 		return dead;
 	}
