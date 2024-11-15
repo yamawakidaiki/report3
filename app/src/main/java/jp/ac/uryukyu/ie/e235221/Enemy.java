@@ -35,10 +35,25 @@ public class Enemy {
 	 * 
 	 * @param hero 攻撃対象
 	 */
+	// public void attack(Hero hero) {
+	// int damage = (int) (Math.random() * attack);
+	// System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
+	// hero.wounded(damage);
+	// }
+
 	public void attack(Hero hero) {
-		int damage = (int) (Math.random() * attack);
-		System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
-		hero.wounded(damage);
+		// 敵が生きているなら
+		if (!this.dead) {
+			// ダメージを計算
+			int damage = (int) (Math.random() * attack);
+			System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
+
+			// 相手にダメージを与える
+			hero.wounded(damage);
+		} else {
+			// 敵が死んでいるとき
+			System.out.printf("%sは既に死亡しているため、攻撃できない。\n", name);
+		}
 	}
 
 	/**
